@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scheme>
+    
+    <import name="VSO_Gen" />
+
+    
+
+    <type name="baseDailyBonusesData_Ptr">
+    	<field name="type" type="String" />
+    	<field name="_editorOnly_" type="String" optional="true"/>
+    	<child name="ptr" type="baseDailyBonusesData">
+    		<switch name="type" />
+    	</child>
+    </type>
+    
+    <type name="baseDailyBonusesData">
+    	<extends name="asset" />
+    	<list name="weeks" type="Game::DailyBonus::Week" />
+    	<field name="minimalIntervalInSeconds" type="Int" optional="true" />
+    </type>
+    
+    <type name="Game::DailyBonus::Day">
+    	<list name="rewards" type="Game::DailyBonus::Reward" />
+    </type>
+    
+    <type name="Game::DailyBonus::Reward">
+    	<field name="type" type="String" optional="true" />
+    	<field name="quantity" type="Int" optional="true" />
+    </type>
+    
+    <type name="Game::DailyBonus::Week">
+    	<list name="days" type="Game::DailyBonus::Day" />
+    </type>
+    
+    
+</scheme>
