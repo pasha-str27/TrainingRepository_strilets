@@ -1,0 +1,3 @@
+[submodule "SubmoduleRepository_strilets"]
+	path = SubmoduleRepository_strilets
+	url = https://github.com/pasha-str27/SubmoduleRepository_strilets
